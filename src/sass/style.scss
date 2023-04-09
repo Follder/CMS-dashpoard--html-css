@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+$main-color: #9197B3;
+$active-color: #5932EA;
+$light-green-color: rgba(22, 192, 152, 0.38);
+$green-color: #008767;
+$light-red-color: #FFC5C5;
+$red-color: #DF0404;
+$grey-color: #B5B7C0;
+$background-color: #F9FBFF;
+
+@import 'blocks/side-panel';
+@import 'blocks/menu';
+@import 'blocks/table';
+@import 'blocks/row';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $main-color;
+    background-color: #2e2e2e;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    height: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 306px auto;
+}
+
+.arrow:before {
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%239197B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center center no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+.content {
+    background-color: $background-color;
+    padding: 41px 95px 0 71px;
+}
+.greeting-message {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+.center {
+    text-align: center;
+}

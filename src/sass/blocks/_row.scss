@@ -1,0 +1,31 @@
+.row {
+    display: grid;
+    grid-template-columns: 172px 131px 156px 207px 141px 80px;
+    grid-template-rows: 68px;
+    grid-auto-rows: 68px;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #292D32;
+    &__status{
+        width: 100%;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        &_active {
+            padding: 4px 18px;
+            color: $green-color;
+            background-color: $light-green-color;
+            border: 1px solid $green-color;
+        }
+        &_inactive {
+            padding: 4px 12px;
+            color: $red-color;
+            background-color: $light-red-color;
+            border: 1px solid $red-color;
+        }
+    }
+}
