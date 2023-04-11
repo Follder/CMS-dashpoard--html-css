@@ -21,10 +21,18 @@
             img, svg {
                 width: 24px;
                 margin-right: 14px;
+                path {
+                    stroke: $main-color;
+                }
             }
             &_active {
                 background-color: $active-color;
                 color: #fff;
+                svg {
+                    path {
+                        stroke: #fff;
+                    }
+                }
             }
             &_active.arrow:before {
                 content: '';
