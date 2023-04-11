@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 271px;
+    margin: 0;
+    padding: 0;
+    &__item {
+        list-style-type: none;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background: #F5F5F5;
+            border: 1px solid #EEEEEE;
+            border-radius: 4px;
+            width: 26px;
+            height: 24px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #404B52;
+        }
+        &_active {
+            a {
+                background-color: $active-color;
+                border-color: $active-color;
+                color: #fff;
+            }
+        }
+    }
+}

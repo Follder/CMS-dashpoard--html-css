@@ -63,5 +63,17 @@
         height: 50px;
         border-bottom: 1px solid #EEEEEE;
     }
+    &__footer {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        &-pages {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
     
 }
