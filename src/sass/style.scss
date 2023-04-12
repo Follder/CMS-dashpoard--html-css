@@ -14,6 +14,7 @@ $background-color: #F9FBFF;
 @import 'blocks/table';
 @import 'blocks/row';
 @import 'blocks/pagination';
+@import 'blocks/burger';
 
 * {
     box-sizing: border-box;
@@ -23,16 +24,17 @@ body {
     margin: 0;
     padding: 0;
     color: $main-color;
-    background-color: #2e2e2e;
+    background-color: $background-color;
     font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    width: 1140px;
+    max-width: 1440px;
     height: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 306px auto;
+    position: relative;
 }
 
 .arrow:before {
@@ -46,6 +48,7 @@ body {
     right: 10px;
 }
 .content {
+    position: relative;
     background-color: $background-color;
     padding: 41px 95px 0 71px;
 }
@@ -57,4 +60,49 @@ body {
 }
 .center {
     text-align: center;
+}
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+        height: 100%;
+        grid-template-columns: 250px auto;
+    }
+    .content {
+        padding: 41px 15px 15px 15px; 
+    }
+    .greeting-message {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 990px;
+        grid-template-columns: 210px auto;
+    }
+    .content {
+        max-width: 760px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 760px;
+        grid-template-columns: 1fr;
+    }
+    .content {
+        max-width: 760px;
+        padding: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .container, .content {
+        max-width: 570px;
+    }
+}
+@media (max-width: 575px) {
+    .container, .content {
+        max-width: 100%;
+        padding: 15px;
+    }
 }

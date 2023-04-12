@@ -25,3 +25,26 @@
         }
     }
 }
+@media (max-width: 1199px) {
+    .side-panel {
+        padding: 26px 18px;
+        &__logo img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 991px) {
+    .side-panel {
+        position: absolute;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        z-index: 10;
+        opacity: 0;
+        &_active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
